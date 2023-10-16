@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<div>Before adding, please ensure that the Tracker is not in the following list:</div>
+<section id="badge-container">
+  <% trackers.forEach(function(p) { %>
+    <article class="badge"><%= p.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-tracker-form" action="/trackers" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name">
+  <input type="submit" value="Add Tracker">
+</form>
+
+<%- include('../partials/footer') %>
