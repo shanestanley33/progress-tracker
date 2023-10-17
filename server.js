@@ -14,7 +14,7 @@ require('./config/passport');
 require('./config/ensureLoggedIn');
 
 const indexRouter = require('./routes/index');
-const reviewsRouter = require('./routes/reviews');
+const fitnessTrackersRouter = require('./routes/fitnessTrackers');
 
 const app = express();
 
@@ -45,6 +45,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
+app.use('/fitnessTrackers', fitnessTrackersRouter)
 // Mount these routers to root because not all 
 // paths for a related/nested resource begin the same
 

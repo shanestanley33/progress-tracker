@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<section id="badge-container">
+  <% trackers.forEach(function(p) { %>
+    <article class="badge"><%= p.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-fitnessTracker-form" action="/fitnessTrackers" method="POST">
+  <label>Date:</label>
+  <input type="datetime-local" name="date">
+  <label>pushups:</label>
+  <input type="number" name="pushups">
+  <label>pullups:</label>
+  <input type="number" name="pullups">
+  <label>situps:</label>
+  <input type="number" name="situps">
+  <label>jumping-jacks:</label>
+  <input type="number" name="jumpingJacks">
+  <label>submit:</label>
+  <button type="submit">submit</button>
+</form>
+
+<%- include('../partials/footer') %>
