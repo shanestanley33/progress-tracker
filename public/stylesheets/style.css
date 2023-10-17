@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: 'Pixelify Sans', sans-serif;
+    background: url("public/images/Jt3jsKc.jpg");
+    background-size: cover;
+	color: rgb(36, 36, 36);
+}
+
+h1 {
+	font-weight: 700;
+	padding: 20px 0 20px 0;
+}
+
+a {
+	color: red;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+}

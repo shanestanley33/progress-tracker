@@ -8,7 +8,7 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 
 require('dotenv').config();
-// connect to the database with AFTER the config vars are processed
+// connect to the database with AFTER the configs are processed
 require('./config/database');
 require('./config/passport');
 require('./config/ensureLoggedIn');
