@@ -1,3 +1,4 @@
+const fitnessTracker = require('../models/fitnessTracker');
 const FitnessTracker = require('../models/fitnessTracker');
 
 
@@ -7,7 +8,8 @@ module.exports = {
     new: newFitnessTrackers,
     create,
     deleteTracker,
-    editTracker
+    editTracker,
+    updatedTracker
   };
 
   async function index(req, res) {
@@ -43,4 +45,20 @@ module.exports = {
       title: 'Edit Fitness-Trackers',
       fitnessTracker
     })
+  }
+
+  async function updatedTracker(req, res) {
+    try {
+      const updatedTracker = await fitnessTracker.findOneAndUpdate(
+        {_id: req.params.id, userRecommending: req.user._id},
+        // update object with updated properties
+        req.body,
+        // options object {new: true} returns updated doc
+        {new: true}
+      );
+      return res.redirect(`/fitnessTrackers/${updatedTracker._id}`);
+    } catch (error) {
+      console.log(error.message);
+      return res.redirect('/fitnessTrackers');
+    }
   }

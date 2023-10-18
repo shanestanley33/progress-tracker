@@ -11,11 +11,11 @@ router.get('/new', ensureLoggedIn, fitnessTrackersCtrl.new);
 // GET /fitnessTrackers/:id (show functionality) MUST be below new route
 router.get('/:id', fitnessTrackersCtrl.show);
 // GET /fitnessTrackers/:id/edit
-router.get('/:id/edit', ensureLoggedIn, fitnessTrackersCtrl.edit)
+router.get('/:id/edit', ensureLoggedIn, fitnessTrackersCtrl.editTracker)
 // POST /fitnessTrackers
 router.post('/', ensureLoggedIn, fitnessTrackersCtrl.create);
 // DELETE /:id
 router.delete('/:id', ensureLoggedIn, fitnessTrackersCtrl.deleteTracker)
 // PUT /fitnessTrackers/:id
-router.put('/:id', ensureLoggedIn, fitnessTrackersCtrl.update)
+router.put('/:id', ensureLoggedIn, fitnessTrackersCtrl.updatedTracker)
 module.exports = router;
