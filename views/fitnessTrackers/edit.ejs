@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<form id="add-fitnessTracker-form" action="/fitnessTrackers/<%= fitnessTracker.id %>?_method=PUT" method="POST">
+  <label>Date:</label>
+  <input type="datetime-local" name="date" value="<%= fitnessTracker.fitnessTracker %>">
+  <label>pushups:</label>
+  <input type="number" name="pushups" value="<%= fitnessTracker.fitnessTracker %>">
+  <label>pullups:</label>
+  <input type="number" name="pullups" value="<%= fitnessTracker.fitnessTracker %>">
+  <label>situps:</label>
+  <input type="number" name="situps" value="<%= fitnessTracker.fitnessTracker %>">
+  <label>jumping-jacks:</label>
+  <input type="number" name="jumpingJacks" value="<%= fitnessTracker.fitnessTracker %>">
+  <label>submit:</label>
+  <button type="submit">Update</button>
+</form>
+
+<%- include('../partials/footer') %>

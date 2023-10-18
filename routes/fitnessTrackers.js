@@ -6,11 +6,16 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 	
 // GET /fitnessTrackers
 router.get('/', fitnessTrackersCtrl.index);
-// GET /trackers/new
+// GET /fitnessTrackers/new
 router.get('/new', ensureLoggedIn, fitnessTrackersCtrl.new);
-// GET /trackers/:id (show functionality) MUST be below new route
+// GET /fitnessTrackers/:id (show functionality) MUST be below new route
 router.get('/:id', fitnessTrackersCtrl.show);
-// POST /trackers
+// GET /fitnessTrackers/:id/edit
+router.get('/:id/edit', ensureLoggedIn, fitnessTrackersCtrl.edit)
+// POST /fitnessTrackers
 router.post('/', ensureLoggedIn, fitnessTrackersCtrl.create);
-
+// DELETE /:id
+router.delete('/:id', ensureLoggedIn, fitnessTrackersCtrl.deleteTracker)
+// PUT /fitnessTrackers/:id
+router.put('/:id', ensureLoggedIn, fitnessTrackersCtrl.update)
 module.exports = router;

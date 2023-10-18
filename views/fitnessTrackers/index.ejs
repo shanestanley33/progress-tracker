@@ -8,12 +8,15 @@
             <th>Jumping Jacks</th>
         </thead>
         <tbody>
-           <% indexTrackers.ForEach(function(indexTracker) { %>
+           <% indexTrackers.forEach(function(indexTrackers) { %>
             <tr>
-                <td><%= indexTracker.pushups %></td>
-                <td><%= indexTracker.pullups %></td>
-                <td><%= indexTracker.situps %></td>
-                <td><%= indexTracker.jumping-jacks %></td>
+                <td><%= indexTrackers.pushups %></td>
+                <td><%= indexTrackers.pullups %></td>
+                <td><%= indexTrackers.situps %></td>
+                <td><%= indexTrackers.jumpingJacks %></td>
+                <form action = "/fitnessTrackers/<%= indexTrackers._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete tracker</button>
+                </form>
             </tr>
             <% }); %>
         </tbody>
