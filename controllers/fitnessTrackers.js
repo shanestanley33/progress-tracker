@@ -14,13 +14,10 @@ module.exports = {
   }
   
   async function show(req, res) {
-    // Populate the cast array with performer docs instead of ObjectIds
     const fitnessTracker = await FitnessTracker.findById(req.params.id).populate('cast');
   }
   
   function newFitnessTrackers(req, res) {
-    // We'll want to be able to render an  
-    // errorMsg if the create action fails
     res.render('newFitnessTrackers/new', { newFitnessTracker: 'Add new Fitness Trackers', errorMsg: '' });
   }
   
