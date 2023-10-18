@@ -1,11 +1,5 @@
 <%- include('../partials/header') %>
 
-<section id="badge-container">
-  <% trackers.forEach(function(p) { %>
-    <article class="badge"><%= p.name %></article>
-  <% }) %>
-</section>
-
 <form id="add-fitnessTracker-form" action="/fitnessTrackers" method="POST">
   <label>Date:</label>
   <input type="datetime-local" name="date">

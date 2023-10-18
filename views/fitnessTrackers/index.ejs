@@ -8,10 +8,17 @@
             <th>Jumping Jacks</th>
         </thead>
         <tbody>
-           
-            <%  %>
+           <% indexTrackers.ForEach(function(indexTracker) { %>
+            <tr>
+                <td><%= indexTracker.pushups %></td>
+                <td><%= indexTracker.pullups %></td>
+                <td><%= indexTracker.situps %></td>
+                <td><%= indexTracker.jumping-jacks %></td>
+            </tr>
+            <% }); %>
         </tbody>
     </table>
     <div id="add-fitnessTracker">
+        <a href="/fitnessTrackers/new">Add a tracker</a>
     </div>
 <%- include('../partials/footer.ejs') %>

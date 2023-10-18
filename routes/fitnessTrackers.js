@@ -4,7 +4,7 @@ const router = express.Router();
 const fitnessTrackersCtrl = require('../controllers/fitnessTrackers');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 	
-// GET /trackers
+// GET /fitnessTrackers
 router.get('/', fitnessTrackersCtrl.index);
 // GET /trackers/new
 router.get('/new', ensureLoggedIn, fitnessTrackersCtrl.new);

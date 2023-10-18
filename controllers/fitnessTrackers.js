@@ -18,10 +18,12 @@ module.exports = {
   }
   
   function newFitnessTrackers(req, res) {
-    res.render('newFitnessTrackers/new', { newFitnessTracker: 'Add new Fitness Trackers', errorMsg: '' });
+    res.render('fitnessTrackers/new');
   }
   
   async function create(req, res) {
-   const newFitnessTracker = new newFitnessTracker(req.body);
-
+  FitnessTracker.create(req.body);
+  console.log(req.body)
+  res.redirect('/fitnessTrackers')
+  
   };
