@@ -17,6 +17,7 @@
                 <form action = "/fitnessTrackers/<%= indexTrackers._id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete tracker</button>
                 </form>
+                <a href="/fitnessTrackers/<%= indexTrackers._id %>/edit">Edit a tracker</a>
             </tr>
             <% }); %>
         </tbody>

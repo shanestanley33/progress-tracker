@@ -19,7 +19,7 @@ module.exports = {
   }
   
   async function show(req, res) {
-    const fitnessTracker = await FitnessTracker.findById(req.params.id).populate('cast');
+    const fitnessTracker = await FitnessTracker.findById(req.params.id);
   }
   
   function newFitnessTrackers(req, res) {
@@ -40,7 +40,8 @@ module.exports = {
   }
 
   async function editTracker(req, res) {
-    const fitnessTracker = FitnessTracker.getOne(req.params.id)
+    const fitnessTracker = await FitnessTracker.findById(req.params.id)
+    console.log("this is the fitnessTracker", fitnessTracker)
     res.render('fitnessTrackers/edit', {
       title: 'Edit Fitness-Trackers',
       fitnessTracker
@@ -48,17 +49,17 @@ module.exports = {
   }
 
   async function updatedTracker(req, res) {
+    console.log(req.body)
     try {
-      const updatedTracker = await fitnessTracker.findOneAndUpdate(
-        {_id: req.params.id, userRecommending: req.user._id},
+      const updatedTracker = await fitnessTracker.findByIdAndUpdate(
+        req.params.id,
         // update object with updated properties
         req.body,
         // options object {new: true} returns updated doc
         {new: true}
       );
-      return res.redirect(`/fitnessTrackers/${updatedTracker._id}`);
+      return res.redirect('/fitnessTrackers');
     } catch (error) {
-      console.log(error.message);
       return res.redirect('/fitnessTrackers');
     }
   }

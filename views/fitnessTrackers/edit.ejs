@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<form id="add-fitnessTracker-form" action="/fitnessTrackers/<%= fitnessTracker.id %>?_method=PUT" method="POST">
+<form id="add-fitnessTracker-form" action="/fitnessTrackers/<%= fitnessTracker._id %>?_method=PUT" method="POST">
   <label>Date:</label>
   <input type="datetime-local" name="date" value="<%= fitnessTracker.fitnessTracker %>">
   <label>pushups:</label>
