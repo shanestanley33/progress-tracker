@@ -2,9 +2,9 @@
     <h1>List of Trackers </h1>
     <table class="table" id="tracker-index">
         <thead>
-            <th scope="row">Pushups</th>
-            <th scope="col">Pullups</th>
-            <th scope="col">Situps</th>
+            <th>Pushups</th>
+            <th>Pullups</th>
+            <th>Situps</th>
             <th>Jumping Jacks</th>
         </thead>
         <tbody>
@@ -15,9 +15,11 @@
                 <td><%= indexTrackers.situps %></td>
                 <td><%= indexTrackers.jumpingJacks %></td>
                 <form action = "/fitnessTrackers/<%= indexTrackers._id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete tracker</button>
+                    <button type="submit">Delete tracker</button>
                 </form>
-                <a href="/fitnessTrackers/<%= indexTrackers._id %>/edit">Edit a tracker</a>
+                <form action = "/fitnessTrackers/<%= indexTrackers._id %>/edit">
+                    <button type="submit">Edit tracker</button>
+                </form>
             </tr>
             <% }); %>
         </tbody>

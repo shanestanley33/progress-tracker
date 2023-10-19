@@ -1,27 +1,36 @@
-* {
-	margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap');
+
+
 
 body {
 	font-size: 14px;
 	font-family: 'Pixelify Sans', sans-serif;
-    background-image: url("public/images/Jt3jsKc.jpg");
+    background-image: url("../images/Jt3jsKc.jpg");
     background-size: cover;
+	background-repeat: no-repeat;
 	color: rgb(36, 36, 36);
+	text-align: center;
 }
 
 h1 {
 	font-weight: 700;
 	padding: 20px 0 20px 0;
 }
-
+td {
+text-align: center;
+}
+#tracker-index {
+	text-align: center;
+}
 a {
-	color: red;
+	
+	color: black;
 }
 
 main {
+	
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
