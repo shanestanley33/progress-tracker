@@ -13,12 +13,14 @@
 <body>
   <nav>
     <a href="/">Home</a>
+    <% if (user) { %>
     &nbsp;|&nbsp;
     <a href="/fitnessTrackers/new">New Trackers</a>
     &nbsp;|&nbsp;
     <a href="/fitnessTrackers">All Trackers</a>
-    <% if (user) { %>
+    &nbsp;|&nbsp;
+    <a href="/logout">Sign Out</a>
       <% } else { %>
-        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="../images/google_logo.png" height="30px" width="30px"></a>
+        <a href="/auth/google" class="login">Sign In&nbsp;<img src="../images/google_logo.png"></a>
       <% } %>
   </nav>
