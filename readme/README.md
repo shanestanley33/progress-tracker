@@ -5,6 +5,8 @@
 ## 📷 Screenshots.
 <img width="863" alt="welcome-screen" src="https://github.com/shanestanley33/progress-tracker/assets/19402451/fcecf466-2783-49fc-859e-8d4b4f310c45">
 <img width="860" alt="add:edit:new-tracker-screen" src="https://github.com/shanestanley33/progress-tracker/assets/19402451/c603827d-c1ec-4b7e-b09d-97a585fa55ee">
+
+#### features to come:
 <img width="833" alt="features-to-come" src="https://github.com/shanestanley33/progress-tracker/assets/19402451/c1e0bd2d-1d1b-413d-a5b1-6b5f78e93b90">
 
 
@@ -15,8 +17,8 @@
 ## 🔗 Link to site : [progress tracker](https://progresstracker-shane-895b5e55cab0.herokuapp.com/fitnessTrackers)
 
 ## Future plans: 
-1. turn fitness tracker into a template and add more templates options like grocery list/cost tracker.
+1. turn fitness tracker into a template and add more template options like grocery list/cost tracker.
 2. add bar graph so users can see progress of their trackers.
-3. add measuring tools: Kg and lbs. for fitness tracker, $cost/budgeting for grocery trackers, etc...
-4. work on better understanding how a site links up with a apple watch or other wearable.
+3. add measuring tools to trackr units: Kg and lbs. for fitness tracker, $cost/budgeting for grocery trackers, etc...
+4. work on understanding how a site links up with a apple watch or other wearables.
 5. add a way for users to submit questions/comments/suggestions/constructive criticisms.
