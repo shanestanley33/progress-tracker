@@ -23,7 +23,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;}
 a {
-	
+	text-decoration: none;
 	color: black;
 }
 
@@ -34,8 +34,10 @@ a {
 }
 
 td {
-	margin: 60px;
+	margin: 70px;
 }
+
+
 
 .login {
 	display: flex;
@@ -46,4 +48,8 @@ td {
   
   .login img {
 	height: 30px;
+  }
+
+  button {
+	margin: 50px;
   }
