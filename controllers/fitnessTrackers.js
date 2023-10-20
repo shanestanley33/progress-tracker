@@ -14,7 +14,7 @@ module.exports = {
 
   async function index(req, res) {
     const fitnessTrackers = await FitnessTracker.find({});
-    console.log(fitnessTrackers)
+    //console.log(fitnessTrackers)
     res.render('fitnessTrackers/index', {indexTrackers: fitnessTrackers});
   }
   
@@ -28,7 +28,7 @@ module.exports = {
   
   async function create(req, res) {
   FitnessTracker.create(req.body);
-  console.log(req.body)
+  //console.log(req.body)
   res.redirect('/fitnessTrackers')
   
   }
@@ -41,7 +41,7 @@ module.exports = {
 
   async function editTracker(req, res) {
     const fitnessTracker = await FitnessTracker.findById(req.params.id)
-    console.log("this is the fitnessTracker", fitnessTracker)
+    //console.log("this is the fitnessTracker", fitnessTracker)
     res.render('fitnessTrackers/edit', {
       title: 'Edit Fitness-Trackers',
       fitnessTracker
@@ -49,7 +49,7 @@ module.exports = {
   }
 
   async function updatedTracker(req, res) {
-    console.log(req.body)
+    //console.log(req.body)
     try {
       const updatedTracker = await fitnessTracker.findByIdAndUpdate(
         req.params.id,
